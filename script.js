@@ -3,8 +3,11 @@ const PASSCODE = "0312";
 const content = {
     stressed: {
         messages: [
-            "Take a breath. You're doing better than you think.",
-            "I wish I could hug you right now."
+            "Take a breath for me. You don't have to solve everything right now.",
+            "I know today feels heavy, but you're stronger than the moment you're in.",
+            "You handle so much with grace, even when no one else sees it. I see it.",
+            "Pause here for a second. You're allowed to rest.",
+            "If I were here with you, I'd tell you to sit down and let the world wait."
         ],
         photos: [
             "assets/photos/us7.jpg",
@@ -16,8 +19,11 @@ const content = {
     },
     miss: {
         messages: [
-            "I miss you too. More than you know.",
-            "This made me think of you."
+            "I miss you too. I think about you more than I probably say.",
+            "This made me think of you, and I wanted you to know that.",
+            "You're never far from my thoughts, even on busy days.",
+            "Being with you feels like home in a way I never expected.",
+            "I'm really grateful we found each other when we did."
         ],
         photos: [
             "assets/photos/us15.jpg",
@@ -30,19 +36,24 @@ const content = {
     },
     sleep: {
         messages: [
-            "Close your eyes. Tomorrow can wait.",
-            "You're safe. You're loved."
+            "You don't need to figure anything out tonight. Tomorrow can handle itself.",
+            "Close your eyes for a moment. You're safe right now.",
+            "Let your mind rest, I'll be here when you wake up.",
+            "Even when you're quiet, even when you're tired, you're enough.",
+            "IF I were there, I'd pull you a little closer and tell you it's okay."
         ],
         photos: [
             "assets/photos/us4.jpg",
-            "assets/photos/us18.jpg",
-            "assets/photos/us21.jpg"
+            "assets/photos/us18.jpg"
         ]
     },
     smile: {
         messages: [
-            "You have the best smile. Don't forget that.",
-            "This is me reminding you you're amazing."
+            "This is me reminding you how incredible you are, just in case you forgot.",
+            "You have this way of making everything lighter. I hope you feel that right now.",
+            "I really like the person you are. A lot.",
+            "You make ordinary moments better just by being you.",
+            "If you're smiling right now, that counts as a win."
         ],
         photos: [
             "assets/photos/us2.jpg",
