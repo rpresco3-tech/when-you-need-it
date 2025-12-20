@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" /<>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>When You Need It</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <div id="lock-screen" class="screen">
+        <h1>When You Need It</h1>
+        <p>Enter the code</p>
+        <input type="password" id="passcode" />
+        <button onclick="unlock()">Enter</button>
+    </div>
+
+    <div id="home-screen" class="screen hidden">
+        <h2>How are you feeling?</h2>
+        <div class="buttons">
+            <button onclick="openMood('stressed')">Stressed</button>
+            <button onclick="openMood('miss')">Miss Me</button>
+            <button onclick="openMood('sleep')">Can't Sleep</button>
+            <button onclick="openMood('smile')">Need a Smile</button>
+        </div>
+    </div>
+
+    <div id="mood-screen" class="screen hidden">
+        <img id="mood-photo" />
+        <p id="mood-text"></p>
+        <button onclick="goHome()">Back</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
