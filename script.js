@@ -7,8 +7,11 @@ const content = {
             "I wish I could hug you right now."
         ],
         photos: [
-            "assets/photos/us1.jpg",
-            "assets/photos/us2.jpg"
+            "assets/photos/us7.jpg",
+            "assets/photos/us11.jpg",
+            "assets/photos/us14.jpg",
+            "assets/photos/us16.jpg",
+            "assets/photos/us22.jpg"
         ]
     },
     miss: {
@@ -17,7 +20,12 @@ const content = {
             "This made me think of you."
         ],
         photos: [
-            "assets/photos/us3.jpg"
+            "assets/photos/us15.jpg",
+            "assets/photos/us17.jpg",
+            "assets/photos/us20.jpg",
+            "assets/photos/us24.jpg",
+            "assets/photos/us28.jpg",
+            "assets/photos/us33.jpg"
         ]
     },
     sleep: {
@@ -26,7 +34,9 @@ const content = {
             "You're safe. You're loved."
         ],
         photos: [
-            "assets/photos/us4.jpg"
+            "assets/photos/us4.jpg",
+            "assets/photos/us18.jpg",
+            "assets/photos/us21.jpg"
         ]
     },
     smile: {
@@ -35,7 +45,13 @@ const content = {
             "This is me reminding you you're amazing."
         ],
         photos: [
-            "assets/photos/us5.jpg"
+            "assets/photos/us2.jpg",
+            "assets/photos/us3.jpg",
+            "assets/photos/us8.jpg",
+            "assets/photos/us13.jpg",
+            "assets/photos/us27.jpg",
+            "assets/photos/us29.jpg",
+            "assets/photos/us30.jpg"
         ]
     }
 };
