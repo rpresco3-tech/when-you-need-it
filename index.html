@@ -16,36 +16,43 @@
     
 </head>
 <body>
-
-    <div id="lock-screen" class="screen">
-        <h1>When You Need It</h1>
-        <p>Enter the code</p>
-        <input type="password" id="passcode" />
-        <button onclick="unlock()">Enter</button>
-    </div>
-
-    <div id="home-screen" class="screen hidden">
-        <h2>How are you feeling?</h2>
+    <header id="app-header">
+        <h1>When You Need It 💌</h1>
         <button id="mode-toggle" class="mode-toggle">🌞</button>
-        <div class="buttons">
-            <button onclick="openMood('stressed')">Stressed</button>
-            <button onclick="openMood('miss')">Miss Me</button>
-            <button onclick="openMood('sleep')">Can't Sleep</button>
-            <button onclick="openMood('smile')">Need a Smile</button>
+    </header>
+    <main id="app-content">
+        <div id="lock-screen" class="screen">
+            <h1>When You Need It</h1>
+            <p>Enter the code</p>
+            <input type="password" id="passcode" />
+            <button onclick="unlock()">Enter</button>
         </div>
-        <p class="dedication">Made for you, always.</p>
-    </div>
 
-    <div id="mood-screen" class="screen hidden">
-        <div id="mood-card">
-            <img id="mood-photo" />
-            <p id="mood-text"></p>
-            <button id="music-btn" class="music-btn" onclick="toggleMusic()">🎵 Off</button>
-            <button onclick="goHome()" class="back-btn">Back</button>
+        <div id="home-screen" class="screen hidden">
+            <h2>How are you feeling?</h2>
+            <div class="buttons">
+                <button onclick="openMood('stressed')">Stressed</button>
+                <button onclick="openMood('miss')">Miss Me</button>
+                <button onclick="openMood('sleep')">Can't Sleep</button>
+                <button onclick="openMood('smile')">Need a Smile</button>
+            </div>
+            <p class="dedication">Made for you, always.</p>
         </div>
-    </div>
 
-    <audio id="bg-music"></audio>
-    <script src="script.js"></script>
+        <div id="mood-screen" class="screen hidden">
+            <div id="mood-card">
+                <img id="mood-photo" />
+                <p id="mood-text"></p>
+                <button id="music-btn" class="music-btn" onclick="toggleMusic()">🎵 Off</button>
+                <button onclick="goHome()" class="back-btn">Back</button>
+            </div>
+        </div>
+
+        <audio id="bg-music"></audio>
+        <script src="script.js"></script>
+    </main>
+    <footer id="app-footer">
+        <p>Made with ❤️</p>
+    </footer>
 </body>
 </html>
