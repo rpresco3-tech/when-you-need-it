@@ -4,7 +4,9 @@
     <meta charset="UTF-8" /<>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>When You Need It</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
+    
 </head>
 <body>
 
@@ -23,13 +25,16 @@
             <button onclick="openMood('sleep')">Can't Sleep</button>
             <button onclick="openMood('smile')">Need a Smile</button>
         </div>
+        <p class="dedication">Made for you, always.</p>
     </div>
 
     <div id="mood-screen" class="screen hidden">
-        <img id="mood-photo" />
-        <p id="mood-text"></p>
-        <button id="music-btn" onclick="toggleMusic()">🎵</button>
-        <button onclick="goHome()">Back</button>
+        <div id="mood-card">
+            <img id="mood-photo" />
+            <p id="mood-text"></p>
+            <button id="music-btn" class="music-btn" onclick="toggleMusic()">🎵 Off</button>
+            <button onclick="goHome()" class="back-btn">Back</button>
+        </div>
     </div>
 
     <audio id="bg-music"></audio>

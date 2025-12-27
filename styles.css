@@ -1,9 +1,33 @@
 body {
-    font-family: system-ui, sans-serif;
-    background: #faf7f4;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(180deg, #f8efe9, #f3e7df);
+    color: #2d2d2d;
     margin: 0;
     padding: 20px;
     text-align: center;
+}
+
+body.night {
+    background: linear-gradient(180deg, #1f1f2e, #3a2c40);
+    color: #f2f2f2;
+}
+
+body.night .mood-btn {
+    background: rgba(255, 255, 255, 0.92);
+    color: #2d2d2d;
+}
+
+body.night .music-btn {
+    background: rgba(255, 255, 255, 0.85);
+    color: #2d2d2d;
+}
+
+body.night #mood-card {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.app-title {
+    color: inherit
 }
 
 .screen {
@@ -16,6 +40,7 @@ body {
     opacity: 0;
     pointer-events: none;
     position: absolute;
+    transition: opacity 0.3s ease;
 }
 
 .buttons button,
@@ -31,8 +56,97 @@ button {
     color: white;
 }
 
+.fade {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+#home-screen,
+#mood-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    padding: 20px;
+    transition: opacity 0.3s ease;
+}
+
+#mood-card {
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 16px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+#mood-photo {
+    width: 100%;
+    border-radius: 14px;
+    margin-bottom: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 6s ease;
+    transform: scale(1.03);
+}
+
+#mood-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #2d2d2d;
+    margin-bottom: 12px;
+}
+
+.mood-btn {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border-radius: 14px;
+    border: none;
+    font-size: 1rem;
+    background: white;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.15 ease, box-shadow 0.15s ease;
+}
+
+.mood-btn:active {
+    transform: scale(0.97);
+}
+
+.music-btn {
+    background: rgba(255, 255, 255, 0.9);
+    color: #2d2d2d;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    align-self: center;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+    transition: all 0.2s ease;
+}
+
+.music-btn.on {
+    box-shadow: 0 6px 14px rgba(120, 80, 200, 0.25);
+    transform: scale(1.03)
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 6px;
+}
+
 img {
     max-width: 100%;
     border-radius: 12px;
     margin-bottom: 15px;
+}
+
+.dedication {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 24px;
 }

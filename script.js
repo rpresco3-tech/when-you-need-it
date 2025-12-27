@@ -1,5 +1,14 @@
 const PASSCODE = "4YONNIE";
 
+let cycleInterval = null;
+
+document.addEventListener("DOMContentLoaded", () => {
+    const hour = new Date().getHours();
+    if (hour >= 20 || hour < 6) {
+        document.body.classList.add("night");
+    }
+});
+
 const content = {
     stressed: {
         messages: [
@@ -83,6 +92,13 @@ const content = {
     }
 };
 
+const moodIntervals = {
+    stressed: 15000,
+    miss: 20000,
+    sleep: 25000,
+    smile: 12000,
+};
+
 let audio;
 let musicEnabled = false;
 let currentMood = null;
@@ -123,9 +139,11 @@ function stopMusic() {
 
 function toggleMusic() {
     musicEnabled = !musicEnabled;
+    const btn = document.getElementById("music-btn");
 
-    document.getElementById("music-btn").innerText =
-        musicEnabled ? "🔊" : "🔇";
+    btn.innerText = `🎵 ${musicEnabled ? "On" : "Off"}`;
+
+    btn.classList.toggle("on", musicEnabled);
     
     if (musicEnabled && currentMood) {
             playMoodMusic(currentMood);
@@ -145,36 +163,41 @@ function unlock() {
 }
 
 function openMood(mood) {
+    if (!content[mood]) return;
+
     currentMood = mood;
-
-    const data = content[mood];
-    let msg =
-        getRandom(data.messages, mood + "-msg");
-
-    const time = getTimeOfDay();
-
-    if (mood === "sleep" && time === "night") {
-        msg = "It's late. You don't have to carry everything tonight. Let yourself rest.";
-    }
-
-    if (mood === "stressed" && time === "morning") {
-        msg = "One step at a time today. You don't need to rush.";
-    }
-
-    const photo =
-        data.photos[Math.floor(Math.random() * data.photos.length)];
-    
-    document.getElementById("mood-text").innerText = msg;
-    document.getElementById("mood-photo").src = photo;
 
     document.getElementById("home-screen").classList.add("hidden");
     document.getElementById("mood-screen").classList.remove("hidden");
 
-    stopMusic();
-    playMoodMusic(mood);
+    const data = content[mood];
+    const firstMessage =
+        data.messages[Math.floor(Math.random() * data.messages.length)];
+    const firstPhoto =
+        data.photos[Math.floor(Math.random() * data.photos.length)];   
+    
+    const textEl = document.getElementById("mood-text");
+    const photoEl = document.getElementById("mood-photo");
+
+    textEl.innerText = firstMessage;
+    photoEl.src = firstPhoto;
+
+    document.getElementById("mood-screen").classList.remove("fade");
+    
+    if (musicEnabled) {
+        stopMusic();
+        playMoodMusic(mood);
+    }
+
+    startMoodCycle(mood);
 }
 
 function goHome() {
+    if (cycleInterval) {
+        clearInterval(cycleInterval);
+        cycleInterval = null;
+    }
+
     stopMusic();
     currentMood = null;
 
@@ -182,28 +205,38 @@ function goHome() {
     document.getElementById("home-screen").classList.remove("hidden");
 }
 
-const lastVisit = localStorage.getItem("lastVisit");
-if (lastVisit) {
-    document.querySelector("#home-screen h2").innerText =
-        `Welcome back. Last time you were here: ${lastVisit}`;
-}
+function getNonRepeatingRandom(arr, last) {
+    if (arr.length ===  1) return arr[0];
 
-localStorage.setItem("lastVisit", new Date().toLocaleString());
-
-function getRandom(arr, key) {
-    let last = localStorage.getItem(key);
     let next;
     do {
         next = arr[Math.floor(Math.random() * arr.length)];
     } while (next === last);
-    localStorage.setItem(key, next);
+
     return next;
 }
 
-function getTimeOfDay() {
-    const hour = new Date().getHours();
-    if (hour >= 5 && hour < 12) return "morning";
-    if (hour >= 12 && hour < 18) return "afternoon";
-    if (hour >= 18 && hour < 22) return "evening";
-    return "night"
+function startMoodCycle(mood) {
+    const data = content[mood];
+    let lastMessage = null;
+    let lastPhoto = null;
+
+    if (cycleInterval) clearInterval(cycleInterval);
+
+    cycleInterval = setInterval(() => {
+        const msg = getNonRepeatingRandom(data.messages, lastMessage);
+        const photo = getNonRepeatingRandom(data.photos, lastPhoto);
+
+        lastMessage = msg;
+        lastPhoto = photo;
+
+        document.getElementById("mood-screen").classList.add("fade");
+
+        setTimeout(() => {
+            document.getElementById("mood-text").innerText = msg;
+            document.getElementById("mood-photo").src = photo;
+
+            document.getElementById("mood-screen").classList.remove("fade");
+        }, 400);
+    }, moodIntervals[mood] || 15000);
 }
