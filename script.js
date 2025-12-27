@@ -1,7 +1,8 @@
 const PASSCODE = "4YONNIE";
 
 let cycleInterval = null;
-let isNight = false
+const hour = new Date().getHours();
+const isNight = hour >= 20 || hour < 6;
 
 document.addEventListener("DOMContentLoaded", () => {
     const hour = new Date().getHours();
@@ -12,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const modeToggle = document.getElementById("mode-toggle");
-const metaTheme = document.querySelector('meta[name="theme-color"]');
+const metaTheme = document.getElementById("theme-color-meta");
 
 document.body.classList.toggle("night", isNight);
 modeToggle.innerText = isNight ? "🌙" : "🌞";

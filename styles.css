@@ -51,7 +51,7 @@ body.night #mood-card {
 
 body.night #app-header,
 body.night #app-footer {
-    background:rgba(43, 31, 59, 0.85);
+    background:#2b1f3b;
     color: #f2f2f2;
 }
 
@@ -215,9 +215,10 @@ body.night .mode-toggle{
     position: fixed;
     top: 0;
     left: 0;
+    font-size: 16px;
     width: 100%;
     height: 60px;
-    background: rgba(255, 255, 255, 0.9);
+    background: #fff0eb;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -234,7 +235,7 @@ body.night .mode-toggle{
     left: 0;
     width: 100%;
     height: 50px;
-    background: rgba(255, 255, 255, 0.9);
+    background: #fff0eb;
     display: flex;
     align-items: center;
     justify-content: center;
