@@ -1,6 +1,6 @@
 {
     "name": "When You Need It",
-    "short_name": "YouNeedIt",
+    "short_name": "WYNI",
     "start_url": "./index.html",
     "display": "standalone",
     "background_color": "#fbe4dc",
