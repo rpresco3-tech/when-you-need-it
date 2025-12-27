@@ -1,12 +1,27 @@
 const PASSCODE = "4YONNIE";
 
 let cycleInterval = null;
+let isNight = false
 
 document.addEventListener("DOMContentLoaded", () => {
     const hour = new Date().getHours();
     if (hour >= 20 || hour < 6) {
+        isNight = true;
         document.body.classList.add("night");
     }
+});
+
+const modeToggle = document.getElementById("mode-toggle");
+const metaTheme = document.querySelector('meta[name="theme-color"]');
+
+document.body.classList.toggle("night", isNight);
+modeToggle.innerText = isNight ? "🌙" : "🌞";
+metaTheme.setAttribute('content', isNight ? "#2b1f3b" : "#fff0eb");
+
+modeToggle.addEventListener("click", () => {
+    const isNight = document.body.classList.toggle("night");
+    modeToggle.innerText = isNight ? "🌙" : "🌞";
+    metaTheme.setAttribute('content', isNight ? "2b1f3b" : "#fff0eb");
 });
 
 const content = {
