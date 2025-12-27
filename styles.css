@@ -8,10 +8,11 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    box-sizing: border-box;
     color: #2d2d2d;
     margin: 0;
     padding: 20px;
-    padding-top: env(safe-area-inset-top);
+    padding-top: calc(env(safe-area-inset-top) + 10px);
     padding-bottom: env(safe-area-inset-bottom);
     text-align: center;
 }
