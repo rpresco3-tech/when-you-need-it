@@ -1,0 +1,21 @@
+{
+    "name": "When You Need It",
+    "short_name": "YouNeedIt",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#fbe4dc",
+    "theme_color": "#f18b74",
+    "description": "A personalized app with messages, photos, and music for you.",
+    "icons": [
+        {
+            "src": "icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icon=512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

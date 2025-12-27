@@ -1,19 +1,39 @@
 body {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(180deg, #f8efe9, #f3e7df);
+    min-height: 100vh;
+    background: linear-gradient(160deg, #fff0eb 0%, #ffd6c3 100%),
+                radial-gradient(circle at top, rgba(255, 255, 255, 0.05), transparent 70%);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     color: #2d2d2d;
     margin: 0;
     padding: 20px;
     text-align: center;
 }
 
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top center, rgba(255, 255, 255, 0.05), transparent 70%);
+    pointer-events: none;
+}
+
 body.night {
-    background: linear-gradient(180deg, #1f1f2e, #3a2c40);
+    background: linear-gradient(160deg, #2b1f3b 0%, #51376b 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     color: #f2f2f2;
 }
 
 body.night .mood-btn {
-    background: rgba(255, 255, 255, 0.92);
+    background: rgba(255, 255, 255, 0.85);
     color: #2d2d2d;
 }
 
@@ -105,7 +125,8 @@ button {
     border-radius: 14px;
     border: none;
     font-size: 1rem;
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
+    color: #2d2d2d;
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
     transition: transform 0.15 ease, box-shadow 0.15s ease;
 }
