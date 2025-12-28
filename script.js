@@ -17,12 +17,12 @@ const metaTheme = document.getElementById("theme-color-meta");
 
 document.body.classList.toggle("night", isNight);
 modeToggle.innerText = isNight ? "🌙" : "🌞";
-metaTheme.setAttribute('content', isNight ? "#2b1f3b" : "#fff0eb");
+metaTheme.setAttribute('content', isNight ? "#1c0d3a" : "#fdf6fa");
 
 modeToggle.addEventListener("click", () => {
     const isNight = document.body.classList.toggle("night");
     modeToggle.innerText = isNight ? "🌙" : "🌞";
-    metaTheme.setAttribute('content', isNight ? "2b1f3b" : "#fff0eb");
+    metaTheme.setAttribute('content', isNight ? "#1c0d3a" : "#fdf6fa");
 });
 
 const content = {
