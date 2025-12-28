@@ -28,11 +28,13 @@ modeToggle.addEventListener("click", () => {
 const content = {
     stressed: {
         messages: [
-            "Take a breath for me. You don't have to solve everything right now.",
-            "I know today feels heavy, but you're stronger than the moment you're in.",
-            "You handle so much with grace, even when no one else sees it. I see it.",
-            "Pause here for a second. You're allowed to rest. You're allowed to breathe",
-            "If I were here with you, I'd tell you to sit down and let the world wait."
+            "I know things feel heavy right now. Just remember you're stronger than this moment, and I'm here rooting for you every step of the way. Take a deep breath. You got this. I love you.",
+            "Wishing I could give you the biggest hug. Whatever's stressing you out, it doesn't get to win. You're amazing, and this will pass. I'm here whenever you need me.",
+            "I hate that you're stressed and I can't be there right now. But please know I'm sending you all my calm and love across the distance. Take it one step at a time. You're doing better than you think.",
+            "Just a reminder: you're one of my favorite people in the world, and nothing that's stressing you out changes how incredible you are. Breathe, be kind to yourself, and text or call me anytime. I love you.",
+            "Sending you a virtual hug that lasts as long as you need it. You're not alone in this, I'm always in your corner. Take a little break if you can, sip some water, and remember how much I love you.",
+            "Stress doesn't stand a chance against you in the long run. I'm here cheering you on from afar, believing in you completely. Call me whenever you get a chance.",
+            "I wish I could take all the stress away, but since I can't be there, just know my heart is with you. You're capable, you're loved, and this rough patch is temporary."
         ],
         photos: [
             "assets/photos/us7.jpg",
@@ -48,11 +50,12 @@ const content = {
     },
     miss: {
         messages: [
-            "I miss you too. I think about you more than I probably say.",
-            "This made me think of you, and I wanted you to know that.",
-            "You're never far from my thoughts, even on busy days.",
-            "Being with you feels like home in a way I never expected.",
-            "I'm really grateful we found each other when we did."
+            "I know you're missing me right now, and honestly, I'm missing you just as much. You're my favorite part of the day. Close your eyes and feel me there with you in spirit.",
+            "The distance sucks and I hate that you're feeling it right now. Just remember: every second we're apart is one second closer to being together. I love you.",
+            "I'm sitting here thinking about you and how much I miss your smile, your laugh, your everything. You're my home, and I can't wait to come back to you.",
+            "Missing you hits me in waves too Yonnie. If I could, I'd be there in an instant. For now, imagine my arms around you, my voice in your ear telling you how beautiful you are.",
+            "I know the missing-me feeling is heavy right now. Just wanted to remind you that you're the best part of my world, and nothing can change that. I love you.",
+            "I miss you so deeply it almost hurts. But it's the good kind of hurt because it means I love you that much. Hold on to that thought, and know I'm thinking about you."
         ],
         photos: [
             "assets/photos/us15.jpg",
@@ -69,11 +72,11 @@ const content = {
     },
     sleep: {
         messages: [
-            "You don't need to figure anything out tonight. Tomorrow can handle itself.",
-            "Close your eyes for a moment. You're safe right now.",
-            "Let your mind rest, I'll be here when you wake up.",
-            "Even when you're quiet, even when you're tired, you're enough.",
-            "If I were there, I'd pull you a little closer and tell you it's okay."
+            "Close your eyes and listen to my voice in your head telling you how much I love you. Let everything else fade away. I'm right here with you in spirit, holding you until you drift off.",
+            "I know sleep feels far away right now. Take a slow breath in... and out. Imagine my arms around you, my fingers in your hair. You're safe, you're loved, and your body knows how to rest.",
+            "Wish I was there to rub your back and kiss your forehead until you fall asleep. For now, feel me next to you, warm and calm. Breathe with me: in for four, hold for four, out for four. You're going to sleep beautifully.",
+            "It's okay if your mind is racing, just let the thoughts float by like clouds. I'm sending you all the peace I have. Snuggle in, feel my love wrapping around you like a blanket. Sleep tight Yonnie.",
+            "I hate that you're still awake. Let's do this together: relax your toes, your legs, your tummy, all the way up. Feel the weight melting away. I'm holding your hand across the distance."
         ],
         photos: [
             "assets/photos/us4.jpg",
@@ -86,11 +89,11 @@ const content = {
     },
     smile: {
         messages: [
-            "This is me reminding you how incredible you are, just in case you forgot.",
-            "You have this way of making everything lighter. I hope you feel that right now.",
-            "I really like the person you are. A lot.",
-            "You make ordinary moments better just by being you.",
-            "If you're smiling right now, that counts as a win."
+            "Hey pretty girl, quick reminder: you're my favorite notification, my best laugh, and the reason I grin like an idiot at my phone. Hope this message sneaks a grin onto that pretty face.",
+            "If I were there right now, I'd tickle you until you begged for mercy. Since I can't, consider this your official long-distance tickle attack. Smile yet? Good. Mission accomplished.",
+            "Quick challenge: try not to smile while reading this. Failed already? Excellent. That's the power of knowing someone out there loves you like crazy.",
+            "I just pictured you reading this and hopefully smiling... and now I'm smiling too. Look what you started! Keep it going, you've got the kind of smile that makes the whole world better.",
+            "Sending you an emergency dose of happiness: one mental image of you successfully rage-baiting me. There, did the corners of your mouth move upwards? Did you make that devious little smirk? Perfect."
         ],
         photos: [
             "assets/photos/us2.jpg",
