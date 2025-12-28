@@ -6,7 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     background: linear-gradient(180deg, #fde7e0, #f8f0ff, #e6f2ff);
-    background-size: 400%, 400%;
+    background-size: 400% 400%;
     animation: gradientDay 18s ease infinite;
     /*background: linear-gradient(160deg, #fff0eb 0%, #ffd6c3 100%),
                 radial-gradient(circle at top, rgba(255, 255, 255, 0.05), transparent 70%);
